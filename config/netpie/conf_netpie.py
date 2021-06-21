@@ -8,7 +8,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Documentation'
-copyright = '2020, NETPIE'
+copyright = '2021, Authored and Translated By: Center for Cyber Physical Systems | nccpi-cps@nectec.or.th | www.nstda.or.th/cps'
 author = 'NETPIE'
 
 # The short X.Y version
@@ -58,6 +58,7 @@ coap_domain = 'coap://coap.netpie.io'
 #gql_domain = ''
 
 rst_prolog = """
+.. |docs_lang| replace:: 
 .. |portal_url| replace:: {0}
 .. |broker_url| replace:: {1}
 .. |auth_url| replace:: {2}
