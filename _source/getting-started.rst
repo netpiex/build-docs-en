@@ -5,6 +5,8 @@
 Getting Started
 ===============
 
+|
+
 Creating Project
 ----------------
 
@@ -22,6 +24,7 @@ Fill in the project information. The fields marked with (*) are required. Then c
 
 .. image:: _static/project_first.png
 
+|
 
 Create Device
 ----------------
@@ -46,6 +49,8 @@ By clicking on each device, information associated with the device like Key, Tok
 
 .. image:: _static/device_detail.png
 
+|
+
 .. _key-device-platform:
 
 Connect Device to Platform
@@ -57,20 +62,21 @@ A unique key is required to connect a device to the platform.  The key associate
 
 To connect the device to the platform using MQTT protocol, the following parameters need to be specified:
 
+.. rst-class:: left-align-left-col
 
-.. list-table::
-   :widths: 30 50
-  
-   * - **Host**
-     - |broker_url|
-   * - **Port**
-     - 1883 (mqtt), 1884 (mqtts)
-   * - **Client ID**
-     - Device ClientID created on NETPIE.
-   * - **Username**
-     - Device Token created on NETPIE.
-   * - **Password**
-     - (Not required)
+  .. list-table::
+     :widths: 20 60
+    
+     * - **Host**
+       - |broker_url|
+     * - **Port**
+       - 1883 (mqtt), 1884 (mqtts)
+     * - **Client ID**
+       - Device ClientID created on NETPIE.
+     * - **Username**
+       - Device Token created on NETPIE.
+     * - **Password**
+       - (Not required)
 
 Try connecting to the platform using the MQTT box, which can be downloaded from Chrome Web Store. Open the MQTT box once installed:
 
@@ -84,7 +90,7 @@ Enter the input parameters carefully. Then click the “Save” button, the MQTT
 
 .. image:: _static/mqttbox_connected.png
 
-Test the connection by publishing a message to yourself. Set the Topic value in Publish and Subscribe to ‘@msg/topic_name’. Click the “Subscribe” button before clicking “Publish”:
+Test the connection by publishing a message to yourself. Set the Topic value in Publish and Subscribe to ``@msg/topic_name``. Click the “Subscribe” button before clicking “Publish”:
 
 .. image:: _static/mqttbox_self_pubsub.png
 
@@ -133,6 +139,6 @@ Test communication between these two devices namely “switch” and “lamp”.
 
 .. image:: _static/mqttbox_hivemq.png
 
-We will now send the message from “switch” to “lamp”, to turn on/off the light. To do so, set the “switch” to publish a message on topic “@msg/set/status” and set the “lamp” to subscribe to the topic “@msg/set/status”:
+We will now send the message from “switch” to “lamp”, to turn on/off the light. To do so, set the “switch” to publish a message on topic ``@msg/set/status`` and set the “lamp” to subscribe to the topic ``@msg/set/status``:
 
 .. image:: _static/msg_pub_sub.png

@@ -7,14 +7,14 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Documentation'
-copyright = '2020, NETPIE'
+project = ''
+copyright = '2022, Authored and Translated By: Center for Cyber Physical Systems | nccpi-cps@nectec.or.th | www.nstda.or.th/cps'
 author = 'NETPIE'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '1'
+release = ''
 
 
 # -- General configuration ---------------------------------------------------
@@ -29,6 +29,7 @@ release = '1'
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
+    'sphinx_copybutton',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,14 +51,15 @@ broker_domain = 'mqtt.netpie.io'
 auth_domain = 'https://authx.netpie.io'
 rest_domain = 'https://api.netpie.io/v2/device'
 rest_domain2 = 'api.netpie.io/v2/device'
-feed_domain = 'https://api.netpie.io/v2/feed'
-feed_domain2 = 'api.netpie.io/v2/feed'
+feed_domain = 'https://ds.netpie.io/feed'
+feed_domain2 = 'ds.netpie.io/feed'
 swagger_part = '(ทดสอบการทำงานของ API ได้ที่ https://trial-api.netpie.io)'
 platform_name = 'NETPIE'
 coap_domain = 'coap://coap.netpie.io'
 #gql_domain = ''
 
 rst_prolog = """
+.. |docs_lang| replace:: 
 .. |portal_url| replace:: {0}
 .. |broker_url| replace:: {1}
 .. |auth_url| replace:: {2}
@@ -114,9 +116,10 @@ pygments_style = 'sphinx'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+html_static_path = ['_static']
 #html_extra_path = ['_static']
 
+html_css_files = ["custom.css"]
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -128,9 +131,12 @@ pygments_style = 'sphinx'
 #
 # html_sidebars = {}
 #---sphinx-themes-----
-html_theme = 'rtcat_sphinx_theme'
-import rtcat_sphinx_theme
-html_theme_path = [rtcat_sphinx_theme.get_html_theme_path()]
+#html_theme = 'rtcat_sphinx_theme'
+#import rtcat_sphinx_theme
+#html_theme_path = [rtcat_sphinx_theme.get_html_theme_path()]
 
-html_logo = '_static/NETPIE2020-logo.png'
+html_theme = 'press'
+
+html_logo = '_static/netpie-logo.png'
+html_favicon = '_static/netpie_favicon.png'
 html_favicon = '_static/netpie_favicon.png'
