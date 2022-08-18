@@ -59,7 +59,6 @@ coap_domain = 'coap://coap.netpie.io'
 #gql_domain = ''
 
 rst_prolog = """
-.. |docs_lang| replace:: 
 .. |portal_url| replace:: {0}
 .. |broker_url| replace:: {1}
 .. |auth_url| replace:: {2}
@@ -138,5 +137,4 @@ html_css_files = ["custom.css"]
 html_theme = 'press'
 
 html_logo = '_static/netpie-logo.png'
-html_favicon = '_static/netpie_favicon.png'
 html_favicon = '_static/netpie_favicon.png'
